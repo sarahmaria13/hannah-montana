@@ -1,0 +1,826 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f1e9da;
+    color: #20261f;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 7%;
+
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   STARTSEITE
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 7%;
+
+    color: #f5eddf;
+
+    background:
+        linear-gradient(
+            rgba(25, 32, 24, 0.6),
+            rgba(25, 32, 24, 0.75)
+        ),
+        linear-gradient(
+            120deg,
+            #69745d,
+            #303b2d
+        );
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.small-text {
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(80px, 13vw, 180px);
+    line-height: 0.8;
+
+    margin: 30px 0;
+}
+
+.hero h1 span {
+    font-style: italic;
+    margin-left: 8vw;
+}
+
+.subtitle {
+    max-width: 450px;
+
+    font-size: 18px;
+    line-height: 1.5;
+
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 14px 22px;
+
+    border: 1px solid white;
+    border-radius: 30px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    background: white;
+    color: #20261f;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero-image {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+
+    right: 5%;
+    top: 50px;
+}
+
+/* =========================
+   ALLGEMEINE SECTIONS
+========================= */
+
+section {
+    padding: 120px 7%;
+}
+
+.section-label {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+
+/* =========================
+   GESCHICHTE
+========================= */
+
+.geschichte {
+    max-width: 1100px;
+}
+
+.geschichte h2,
+.rat h2,
+.reisen h2,
+.lore h2 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(50px, 7vw, 100px);
+    line-height: 1;
+
+    margin: 20px 0 40px;
+}
+
+.geschichte h2 span {
+    color: #9a563d;
+    font-style: italic;
+}
+
+.description {
+    max-width: 650px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   HOHER RAT
+========================= */
+
+.rat {
+    background: #59614b;
+    color: #f5eddf;
+}
+
+.intro {
+    margin-bottom: 45px;
+    opacity: 0.7;
+}
+
+.members {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+.member {
+    padding: 12px;
+
+    background: rgba(0, 0, 0, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.member img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+    background: #737d69;
+}
+
+.number {
+    margin-top: 15px;
+
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+.member h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+
+    margin: 5px 0;
+}
+
+.member > p:last-child {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.other-members {
+    margin-top: 120px;
+}
+
+/* =========================
+   REISEN
+========================= */
+
+.reisen {
+    background: #e7ddc9;
+}
+
+.reisen h2 span {
+    color: #9a563d;
+    font-style: italic;
+}
+
+.travel-intro {
+    max-width: 600px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    opacity: 0.7;
+
+    margin-bottom: 60px;
+}
+
+
+/* =========================
+   KARTEN-BEREICH
+========================= */
+
+.travel-map-wrapper {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto 100px;
+
+    background: #f1e9da;
+
+    border: 1px solid rgba(32, 38, 31, 0.15);
+}
+
+
+/* =========================
+   KARTEN-HEADER
+========================= */
+
+.map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 30px;
+
+    border-bottom: 1px solid rgba(32, 38, 31, 0.15);
+}
+
+.map-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: bold;
+
+    opacity: 0.5;
+
+    margin-bottom: 5px;
+}
+
+.map-header h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+}
+
+
+/* =========================
+   LEGENDE
+========================= */
+
+.map-legend {
+    display: flex;
+    gap: 25px;
+
+    font-size: 12px;
+}
+
+.map-legend span {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+}
+
+.legend-dot.visited {
+    background: #9a563d;
+}
+
+.legend-dot.future {
+    background: #59614b;
+}
+
+
+/* =========================
+   KARTE
+========================= */
+
+.travel-map {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #f5eddf,
+            #ddd0b8
+        );
+}
+
+
+/*
+   Die beiden SVG-Karten liegen
+   übereinander.
+*/
+
+.map-container {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+}
+
+.map-container object {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+#europe-map {
+    z-index: 1;
+}
+
+#austria-map {
+    z-index: 2;
+}
+
+
+/* =========================
+   TOOLTIP
+========================= */
+
+.map-tooltip {
+    position: fixed;
+
+    display: none;
+
+    min-width: 190px;
+    max-width: 280px;
+
+    padding: 15px 18px;
+
+    background: #20261f;
+    color: #f1e9da;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+
+    pointer-events: none;
+
+    z-index: 1000;
+}
+
+.map-tooltip strong {
+    display: block;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.map-tooltip span {
+    display: block;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    opacity: 0.75;
+}
+
+
+/* =========================
+   REISELISTE
+========================= */
+
+.trip-list {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    border-top:
+        1px solid rgba(32, 38, 31, 0.2);
+}
+
+.trip {
+    display: grid;
+
+    grid-template-columns: 140px 1fr;
+
+    align-items: center;
+
+    padding: 30px 0;
+
+    border-bottom:
+        1px solid rgba(32, 38, 31, 0.2);
+}
+
+.trip-year {
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+
+    color: #9a563d;
+}
+
+.trip h3 {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    margin-bottom: 5px;
+}
+
+.trip p {
+    opacity: 0.65;
+}
+
+
+/* Aktuelle Reise */
+
+.trip.current {
+    padding-left: 20px;
+
+    border-left:
+        4px solid #9a563d;
+}
+
+
+/* Zukünftige Reise */
+
+.trip.future-trip {
+    opacity: 0.55;
+
+    border-left:
+        4px dashed #59614b;
+}
+
+
+/* =========================
+   LORE
+========================= */
+
+.lore {
+    background: #20261f;
+    color: #f1e9da;
+}
+
+.lore h2 span {
+    color: #c28a6f;
+    font-style: italic;
+}
+
+.lore-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-top: 60px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.2);
+}
+
+.lore-grid div {
+    padding: 30px;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.2);
+}
+
+.lore-grid strong {
+    font-size: 25px;
+}
+
+.lore-grid p {
+    margin-top: 10px;
+}
+
+.insider-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.insider-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.insider-hint {
+    display: block;
+    margin-top: 15px;
+    font-size: 11px;
+    opacity: 0.5;
+}
+
+.insider-list {
+    display: none;
+    margin-top: 25px;
+}
+
+.insider-list.active {
+    display: block;
+}
+
+.insider-list ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.insider-list li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.75;
+}
+
+.sidequest-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidequest-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.sidequest-hint {
+    display: block;
+    margin-top: 15px;
+    font-size: 11px;
+    opacity: 0.5;
+}
+
+.sidequest-list {
+    display: none;
+    margin-top: 25px;
+}
+
+.sidequest-list.active {
+    display: block;
+}
+
+.sidequest-list ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.sidequest-list li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    opacity: 0.75;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 7%;
+
+    background: #20261f;
+
+    color: #f1e9da;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.2);
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .members {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lore-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trip {
+        grid-template-columns: 100px 1fr;
+    }
+
+}
+
+
+/* =========================
+   HANDY
+========================= */
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 80px 6%;
+    }
+
+    .hero {
+        padding: 0 6%;
+    }
+
+    .hero h1 {
+        font-size: 75px;
+    }
+
+    .map-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .map-legend {
+        flex-wrap: wrap;
+    }
+
+    .travel-map {
+        padding: 10px;
+    }
+
+    .map-container {
+        aspect-ratio: 4 / 3;
+    }
+
+    .trip {
+        grid-template-columns: 90px 1fr;
+    }
+
+    .trip-year {
+        font-size: 32px;
+    }
+
+    .trip h3 {
+        font-size: 22px;
+    }
+
+    .lore-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================
+   KLEINES HANDY
+========================= */
+
+@media (max-width: 500px) {
+
+    .members {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .map-container {
+        aspect-ratio: 1 / 1;
+    }
+
+    .trip {
+        grid-template-columns: 75px 1fr;
+    }
+
+    .trip-year {
+        font-size: 28px;
+    }
+
+    .trip h3 {
+        font-size: 19px;
+    }
+
+    .lore-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* =========================
+   INTERAKTIVE KARTE
+========================= */
+
+.visited-map-country {
+    fill: #9a563d !important;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.visited-map-country:hover {
+    opacity: 0.75;
+}
+
+
+.austria-detail {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+
+    display: none;
+
+    background: #f1e9da;
+    padding: 30px;
+}
+
+.austria-detail.active {
+    display: block;
+}
+
+#austria-map {
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+#close-austria {
+    position: relative;
+    z-index: 20;
+
+    border: none;
+    background: #20261f;
+    color: #f1e9da;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+}
